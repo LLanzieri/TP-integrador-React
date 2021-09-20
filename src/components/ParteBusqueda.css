@@ -1,0 +1,33 @@
+.busqueda {
+    margin: 5px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.inputBusqueda {
+    width: 70%;
+    margin: 5px;
+    border-radius: 2px;
+}
+
+.btnBusqueda {
+    width: 15%;
+    margin: 5px;
+    padding: 10px;
+    border-radius: 5px;
+    background-color: transparent;
+    border-color: #00ced1;
+    color: #00ced1;
+    font-weight: 100;
+}
+
+.btnBusqueda:hover {
+    background-color: #00ced1;
+    color: black;
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease 0s;
+    cursor: pointer;
+    outline: none;
+    transform: translateY(-7px);
+}

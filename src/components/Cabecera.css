@@ -1,0 +1,12 @@
+.header {
+    background-color: #1b1c1d;
+    margin-bottom: 10px;
+    color: white;
+    padding: 5px;
+}
+
+.titulo {
+    border: 1px solid red;
+    width: 100%;
+    margin: auto;
+}

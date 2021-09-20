@@ -1,0 +1,9 @@
+.contenedorAnimaciones {
+    display: flex;
+    justify-content: space-between;
+}
+
+.animacionInferior {
+    border: 1px solid red;
+    width: 13%;
+}

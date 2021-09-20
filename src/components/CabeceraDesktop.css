@@ -1,0 +1,66 @@
+.desktop {
+    display: flex;
+    justify-content: space-between;
+    width: 95%;
+    border: 1px solid purple;
+    margin: auto;
+}
+
+.containerIzq {
+    display: flex;
+    border: 1px solid pink;
+    width: 40%;
+    justify-content: space-between;
+}
+
+.animacionDesk {
+    width: 15%;
+}
+
+.tituloPaginaDesk {
+    width: 30%;
+    margin: auto;
+    text-align: center;
+}
+
+.tituloPaginaDesk p {
+    font-size: 25px;
+}
+
+.link {
+    width: 30%;
+    margin: auto;
+}
+
+.containerDer {
+    display: flex;
+    border: 1px solid yellow;
+    width: 40%;
+}
+
+.inputBusquedaDesk {
+    width: 60%;
+    margin: auto;
+    border-radius: 2px;
+}
+
+.btnBusquedaDesk {
+    margin: auto;
+    width: 20%;
+    padding: 10px;
+    border-radius: 5px;
+    background-color: transparent;
+    border-color: #00ced1;
+    color: #00ced1;
+    font-weight: 100;
+}
+
+.btnBusquedaDesk:hover {
+    background-color: #00ced1;
+    color: black;
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease 0s;
+    cursor: pointer;
+    outline: none;
+    transform: translateY(-7px);
+}
