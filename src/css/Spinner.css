@@ -1,0 +1,11 @@
+.containerSpinner {
+    margin: 30%;
+    text-align: center;
+}
+
+@media (min-width:745px) {
+    .containerSpinner {
+        margin: 20%;
+        text-align: center;
+    }
+}

@@ -1,0 +1,10 @@
+.paginas {
+    text-align: center;
+}
+
+.btnPaginacion {
+    margin: 5px;
+    padding: 10px;
+    background-color: #001a33;
+    color: white;
+}

@@ -1,3 +1,25 @@
+.segundoContainer a {
+    text-decoration: none;
+    color: white;
+}
+
+.linkMobile {
+    margin: 15px;
+}
+
+.linkMobile a {
+    text-decoration: none;
+    color: #00ced1;
+    transition: 0.3s;
+}
+
+.linkMobile a:hover {
+    background-color: #00ced1;
+    color: black;
+    padding: 5px;
+    border-radius: 5px;
+}
+
 .busqueda {
     margin: 5px;
     display: flex;
@@ -12,7 +34,7 @@
 }
 
 .btnBusqueda {
-    width: 15%;
+    width: 20%;
     margin: 5px;
     padding: 10px;
     border-radius: 5px;

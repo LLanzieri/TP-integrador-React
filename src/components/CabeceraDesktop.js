@@ -1,7 +1,8 @@
 import React from "react";
 import Lottie from 'react-lottie';
 import animacion2 from '../animaciones/movie-theatre.json';
-import './CabeceraDesktop.css';
+import { Link } from "react-router-dom";
+import '../css/CabeceraDesktop.css';
 
 function CabeceraDesktop() {
 
@@ -22,7 +23,7 @@ function CabeceraDesktop() {
                     <p>MovFlix</p>
                 </div>
                 <div className="link">
-                    <a href="#">Home</a>
+                    <Link to='/'>Home</Link>
                 </div>
             </div>
             <div className="containerDer">

@@ -1,34 +1,36 @@
-import logo from './logo.svg';
 import './App.css';
+import Home from './pages/Home';
+import Detalle from './pages/Detalle';
+import Busqueda from './pages/Busqueda';
+import Error404 from './pages/Error404';
+import BarraInferior from './components/BarraInferior';
+import Footer from './components/Footer';
+import Cabecera from './components/Cabecera';
+import { Switch, Route } from 'react-router-dom';
 
 
 function App() {
   return (
-    <div >
-      <h1>TITULO</h1>
+    <>
+      <div className="contenedordetodo">
+        <Cabecera />
 
-      {/*<div className="App">
-       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header> */}
+        <Switch>
 
+          <Route path='/' exact component={Home} />
+          <Route path='/detalle' component={Detalle} />
+          <Route path='/busqueda' component={Busqueda} />
 
+          {/* SI NO ENTRA A NINGUNA RUTA, MUESTRO EL ERROR */}
+          <Route component={Error404} />
 
+        </Switch>
 
+        <BarraInferior />
+        <Footer />
+      </div>
 
-    </div>
-
+    </>
   );
 }
 

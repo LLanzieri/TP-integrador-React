@@ -3,7 +3,7 @@ import ParteBusqueda from "./ParteBusqueda";
 import Hamburger from 'hamburger-react';
 import animacion2 from '../animaciones/movie-theatre.json';
 import Lottie from 'react-lottie';
-import './CabeceraMobile.css';
+import '../css/CabeceraMobile.css';
 
 function CabeceraMobile() {
 

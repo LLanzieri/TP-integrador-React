@@ -1,7 +1,7 @@
 import React from 'react';
 import Lottie from 'react-lottie';
 import animacion1 from '../animaciones/play.json';
-import './BarraInferior.css';
+import '../css/BarraInferior.css';
 
 function BarraInferior() {
 
