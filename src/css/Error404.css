@@ -1,0 +1,11 @@
+.animacionErrorCara {
+    width: 35%;
+    margin: 10px auto;
+}
+
+.animacionErrorPage {
+    background-color: #001a33;
+    width: 80%;
+    margin: 10px auto;
+    border-radius: 10px;
+}

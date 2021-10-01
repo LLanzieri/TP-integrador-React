@@ -6,6 +6,7 @@ import Error404 from './pages/Error404';
 import BarraInferior from './components/BarraInferior';
 import Footer from './components/Footer';
 import Cabecera from './components/Cabecera';
+import Favoritos from './pages/Favoritos';
 import { Switch, Route } from 'react-router-dom';
 
 
@@ -20,6 +21,7 @@ function App() {
           <Route path='/' exact component={Home} />
           <Route path='/detalle' component={Detalle} />
           <Route path='/busqueda' component={Busqueda} />
+          <Route path='/favoritos' component={Favoritos} />
 
           {/* SI NO ENTRA A NINGUNA RUTA, MUESTRO EL ERROR */}
           <Route component={Error404} />
@@ -27,6 +29,7 @@ function App() {
         </Switch>
 
         <BarraInferior />
+
         <Footer />
       </div>
 

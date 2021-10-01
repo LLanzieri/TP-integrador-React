@@ -2,9 +2,21 @@
     text-align: center;
 }
 
+.tituloPaginas {
+    text-decoration: underline;
+    font-style: italic;
+}
+
 .btnPaginacion {
     margin: 5px;
     padding: 10px;
     background-color: #001a33;
     color: white;
+    cursor: pointer;
+    transition: all 0.3s ease 0s;
+}
+
+.btnPaginacion:hover {
+    background-color: white;
+    color: #001a33;
 }

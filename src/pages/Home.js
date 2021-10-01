@@ -8,6 +8,7 @@ function Home() {
 
     const [pagina, setPagina] = useState(1);
     const [peliculas, setPeliculas] = useState([]);
+    const [totalPaginas, setTotalPaginas] = useState(1);
 
     const api_key = '893534e3373221881282bf1fad40646a';
     const endPoint_populares = `https://api.themoviedb.org/3/movie/popular?api_key=${api_key}&language=es&page=${pagina}`;
@@ -17,7 +18,11 @@ function Home() {
             .then(respuesta => respuesta.json())
             .then(
                 (respuesta) => {
+                    //guardo las peliculas que traigo
                     setPeliculas(respuesta.results);
+
+                    //guardo la cantidad total de páginas que traigo
+                    setTotalPaginas(respuesta.total_pages);
                 },
             )
     }
@@ -28,34 +33,41 @@ function Home() {
     }
 
     const proximaPagina = () => {
-        if (pagina < 500)
+        if (pagina < totalPaginas)
             setPagina(pagina + 1);
     }
 
     //si cambia la página, voy a buscar la que corresponda
     useEffect(
         () => {
+
+            //pongo un array vacío para que se pregunte por el peliculas.length === 0 y se muestre el spinner, de todas formas el fetch va a buscar una página específica
+            setPeliculas([]);
+
             // voy a buscar la página despues de 3 segundos
             setTimeout(buscarPeliculasPopulares, 3000);
         }, [pagina]
     );
 
+
     return (
         <div>
             {peliculas.length === 0 ? <Spinner /> :
                 <>
-                    <Paginacion pagina={pagina} decrementarPagina={paginaAnterior} incrementarPagina={proximaPagina} />
+                    <Paginacion pagina={pagina} decrementarPagina={paginaAnterior} incrementarPagina={proximaPagina} ultimaPagina={totalPaginas} />
                     <div className="containerPeliculas">
                         {
                             peliculas.map(elemento => {
-                                return <Pelicula mostrar={elemento} />
+                                return <Pelicula key={elemento.title} mostrar={elemento} />
                             })
                         }
                     </div>
-                    <Paginacion pagina={pagina} decrementarPagina={paginaAnterior} incrementarPagina={proximaPagina} />
+                    <Paginacion pagina={pagina} decrementarPagina={paginaAnterior} incrementarPagina={proximaPagina} ultimaPagina={totalPaginas} />
                 </>}
+
         </div >
     );
+
 }
 
 export default Home;

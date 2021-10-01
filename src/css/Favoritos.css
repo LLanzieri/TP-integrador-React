@@ -1,0 +1,56 @@
+.containerPeliculas {
+    display: flex;
+    width: 100%;
+    border: 1px solid red;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.headerFavoritos {
+    display: flex;
+    border: 1px solid black;
+    justify-content: center;
+}
+
+.animacionFavoritos {
+    width: 25%;
+}
+
+.tituloFavoritos{
+    margin: auto;
+    
+    font-style: italic;
+    font-size: 20px;
+    text-align: center;
+}
+
+.btnEliminarTodos {
+    margin: 10px auto;
+    background-color: #001a33;
+    padding: 15px;
+    border-radius: 10px;
+    display: block;
+}
+
+.btnEliminarTodos a {
+    text-decoration: none;
+    color: white;
+    font-size: 15px;
+}
+
+.btnEliminarTodos:hover {
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease 0s;
+    cursor: pointer;
+    outline: none;
+    transform: translateY(-7px);
+}
+
+@media (min-width:745px) {
+    .tituloFavoritos {
+        font-size: 25px;
+    }
+    .animacionFavoritos {
+        width: 15%;
+    }
+}

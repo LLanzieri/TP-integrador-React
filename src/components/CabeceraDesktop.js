@@ -3,6 +3,7 @@ import Lottie from 'react-lottie';
 import animacion2 from '../animaciones/movie-theatre.json';
 import { Link } from "react-router-dom";
 import '../css/CabeceraDesktop.css';
+import { useState } from "react/cjs/react.development";
 
 function CabeceraDesktop() {
 
@@ -28,6 +29,7 @@ function CabeceraDesktop() {
             </div>
             <div className="containerDer">
                 <input type="text" name="inputBusqueda" className="inputBusquedaDesk" />
+
                 <button className="btnBusquedaDesk">BUSCAR</button>
             </div>
 
