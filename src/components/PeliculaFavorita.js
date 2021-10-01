@@ -50,10 +50,10 @@ function PeliculaFavorita(props) {
                 <p className="descripcion">{datosPelicula.overview}</p>
                 <p className="releaseDate">Fecha de lanzamiento: {datosPelicula.release_date}</p>
 
-                <button className="btnDetalle" onClick={() => eliminarFavorito(datosPelicula.id)}><a>Eliminar favorito <i class="fa fa-times-circle"></i></a></button>
-                <button className="btnDetalle"><Link to="/detalle">Más información <i class="fa fa-info-circle" aria-hidden="true"></i></Link></button>
-            </div>
+                <button className="btnDetalle" onClick={() => {eliminarFavorito(datosPelicula.id);props.onShow()}}><a>Eliminar favorito <i class="fa fa-times-circle"></i></a></button>
+            <button className="btnDetalle"><Link to="/detalle">Más información <i class="fa fa-info-circle" aria-hidden="true"></i></Link></button>
         </div>
+        </div >
     );
 }
 

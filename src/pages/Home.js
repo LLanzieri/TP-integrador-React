@@ -3,12 +3,16 @@ import Spinner from "../components/Spinner";
 import Pelicula from "../components/Pelicula";
 import Paginacion from "../components/Paginacion";
 import '../css/Home.css'
+import Modal from '../components/Modal'
 
 function Home() {
 
     const [pagina, setPagina] = useState(1);
     const [peliculas, setPeliculas] = useState([]);
     const [totalPaginas, setTotalPaginas] = useState(1);
+
+    // Establezco un estado para pasarle al cartel Modal
+    const [visibilidadModal, setVisibilidadModal] = useState(false);
 
     const api_key = '893534e3373221881282bf1fad40646a';
     const endPoint_populares = `https://api.themoviedb.org/3/movie/popular?api_key=${api_key}&language=es&page=${pagina}`;
@@ -52,13 +56,18 @@ function Home() {
 
     return (
         <div>
+            {/* Este componente va a tener un cartel Modal para mostrar */}
+            <Modal show={visibilidadModal} onClose={() => setVisibilidadModal(false)} >
+                ¡Película favorita guardada exitosamente!
+            </Modal>
             {peliculas.length === 0 ? <Spinner /> :
                 <>
                     <Paginacion pagina={pagina} decrementarPagina={paginaAnterior} incrementarPagina={proximaPagina} ultimaPagina={totalPaginas} />
                     <div className="containerPeliculas">
                         {
                             peliculas.map(elemento => {
-                                return <Pelicula key={elemento.title} mostrar={elemento} />
+                                return <Pelicula key={elemento.title} mostrar={elemento}
+                                    onShow={() => setVisibilidadModal(true)} />
                             })
                         }
                     </div>

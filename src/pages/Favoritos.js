@@ -5,9 +5,13 @@ import Lottie from 'react-lottie';
 import animacion1 from '../animaciones/favourite_star.json';
 import '../css/Favoritos.css'
 import SinFavoritos from '../components/SinFavoritos';
+import Modal from '../components/Modal';
 
 
 function Favoritos() {
+
+    // Establezco un estado para pasarle al cartel Modal
+    const [visibilidadModal, setVisibilidadModal] = useState(false);
 
     const [peliculasFavoritas, setPeliculasFavoritas] = useState([]);
     let aux;
@@ -23,7 +27,6 @@ function Favoritos() {
     };
 
     // Cuando el componente se monta, saco los id de las peliculas favoritas almacenadas en LocalStorage
-
     const cargarFavoritos = () => {
         aux = localStorage.getItem("favoritos");
         arrayFavoritos = JSON.parse(aux);
@@ -31,6 +34,7 @@ function Favoritos() {
     }
 
     const eliminarTodosLosFavoritos = () => {
+
         // limpio el LocalStorage
         localStorage.setItem('favoritos', JSON.stringify([]));
         alert("¡Todas las películas fueron eliminadas de sus favoritos!")
@@ -42,6 +46,13 @@ function Favoritos() {
 
     return (
         <>
+            {/* SOLAMENTE MUESTRO EL MODAL SI TENGO MÁS PELICULAS DESPUES DE ELIMINAR */}
+            {
+                peliculasFavoritas.length !== 0 && <Modal show={visibilidadModal} onClose={() => setVisibilidadModal(false)} >
+                    ¡Película favorita eliminada exitosamente!
+                </Modal>
+            }
+
             <div className="headerFavoritos">
                 <div className="animacionFavoritos">
                     <Lottie options={defaultOptions} />
@@ -62,8 +73,8 @@ function Favoritos() {
             <div className="containerPeliculas">
                 {peliculasFavoritas.length === 0 ? <SinFavoritos /> :
 
-                    // recorro el array de ids y se los paso al componente PeliculaFavorita para que se encargue de mostrar
-                    peliculasFavoritas.map(elemento => { return <PeliculaFavorita key={elemento} id={elemento} /> })
+                    // recorro el array de ids y se los paso al componente PeliculaFavorita para que se encargue de mostrar + props del cartel Modal
+                    peliculasFavoritas.map(elemento => { return <PeliculaFavorita key={elemento} id={elemento} onShow={() => setVisibilidadModal(true)} /> })
                 }
             </div>
 
