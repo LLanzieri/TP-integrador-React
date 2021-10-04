@@ -25,6 +25,7 @@ function CabeceraDesktop() {
                 </div>
                 <div className="link">
                     <Link to='/'>Home</Link>
+                    <Link to='/favoritos'>Favoritos</Link>
                 </div>
             </div>
             <div className="containerDer">

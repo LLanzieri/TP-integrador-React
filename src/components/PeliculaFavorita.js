@@ -12,6 +12,7 @@ function PeliculaFavorita(props) {
     let aux;
     let arrayFavoritos = [];
     let index;
+    let id = props.id;
     const [datosPelicula, setDatosPelicula] = useState({});
 
     const buscarFavorito = () => {
@@ -38,9 +39,9 @@ function PeliculaFavorita(props) {
     useEffect(() => {
         buscarFavorito();
     }, [])
-
+    console.log(datosPelicula);
     return (
-
+        
         <div className="pelicula">
             <div className="imagenPelicula">
                 <img src={prefijoImagen + datosPelicula.poster_path} alt="imagen de la película" />
@@ -51,7 +52,7 @@ function PeliculaFavorita(props) {
                 <p className="releaseDate">Fecha de lanzamiento: {datosPelicula.release_date}</p>
 
                 <button className="btnDetalle" onClick={() => {eliminarFavorito(datosPelicula.id);props.onShow()}}><a>Eliminar favorito <i class="fa fa-times-circle"></i></a></button>
-            <button className="btnDetalle"><Link to="/detalle">Más información <i class="fa fa-info-circle" aria-hidden="true"></i></Link></button>
+            <button className="btnDetalle"><Link to={'/detalle/' + id}>Más información <i class="fa fa-info-circle" aria-hidden="true"></i></Link></button>
         </div>
         </div >
     );

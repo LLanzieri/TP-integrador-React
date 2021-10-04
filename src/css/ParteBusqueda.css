@@ -4,10 +4,11 @@
 }
 
 .linkMobile {
-    margin: 15px;
+     margin: 15px;
 }
 
 .linkMobile a {
+    display: block;
     text-decoration: none;
     color: #00ced1;
     transition: 0.3s;
@@ -23,7 +24,7 @@
 .busqueda {
     margin: 5px;
     display: flex;
-    justify-content: space-evenly;
+    justify-content:space-evenly;
     align-items: center;
 }
 
@@ -42,6 +43,8 @@
     border-color: #00ced1;
     color: #00ced1;
     font-weight: 100;
+    justify-content: space-between;
+    font-size: 80%;
 }
 
 .btnBusqueda:hover {

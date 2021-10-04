@@ -20,6 +20,7 @@
 .tituloPaginaDesk {
     width: 30%;
     margin: auto;
+    padding-top:15px;
     text-align: center;
 }
 
@@ -30,12 +31,14 @@
 .link {
     width: 30%;
     margin: auto;
+    padding: 10px;
 }
 
 .link a {
     text-decoration: none;
     color: #00ced1;
     transition: 0.3s;
+    margin: 10px;
 }
 
 .link a:hover {
@@ -66,6 +69,8 @@
     border-color: #00ced1;
     color: #00ced1;
     font-weight: 100;
+    justify-content: center;
+    font-size: 80%;
 }
 
 .btnBusquedaDesk:hover {

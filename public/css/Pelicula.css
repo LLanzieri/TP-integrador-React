@@ -40,10 +40,9 @@
 
 .btnDetalle {
     margin: 10px;
-    background-color: #001a33;
+    background-color: #001a33 !important;
     padding: 15px;
     border-radius: 10px;
-    color: white;
 }
 
 .btnDetalle a {

@@ -24,11 +24,11 @@ function Pelicula(props) {
                 </div>
                 <div className="containerReseña">
                     <p className="tituloPelicula">{props.mostrar.title}</p>
-                    <p className="descripcion">{props.mostrar.overview}</p>
+                    <p className="descripcion">{props.mostrar.overview.substr(0, 80).trim()}...</p>
                     <p className="releaseDate">Fecha de lanzamiento: {props.mostrar.release_date}</p>
 
-                    <button className="btnDetalle" onClick={() => { guardarFavorito(props.mostrar.id); props.onShow() }}> <a>Agregar Favorito <i class="fa fa-star yellow-color"></i></a></button>
-                    <button className="btnDetalle"><Link to="/detalle">Más información <i class="fa fa-info-circle" aria-hidden="true"></i></Link></button>
+                    <button className="btnDetalle" onClick={() => { guardarFavorito(props.mostrar.id); props.onShow() }}> <a>Agregar Favorito <i className="fa fa-star yellow-color"></i></a></button>
+                    <button className="btnDetalle"><Link to={'/detalle/' + props.mostrar.id}>Más información <i className="fa fa-info-circle" aria-hidden="true"></i></Link></button>
                 </div>
             </div >
         </>);
