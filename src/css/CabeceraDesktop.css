@@ -2,13 +2,13 @@
     display: flex;
     justify-content: space-between;
     width: 95%;
-    border: 1px solid purple;
+   /*  border: 1px solid purple; */
     margin: auto;
 }
 
 .containerIzq {
     display: flex;
-    border: 1px solid pink;
+    /* border: 1px solid pink; */
     width: 40%;
     justify-content: space-between;
 }
@@ -50,7 +50,7 @@
 
 .containerDer {
     display: flex;
-    border: 1px solid yellow;
+    /* border: 1px solid yellow; */
     width: 40%;
 }
 

@@ -1,7 +1,3 @@
-body {
-	padding-bottom: 100px;
-}
-
 .one-line-title {
 	text-overflow: ellipsis;
 	overflow: hidden;

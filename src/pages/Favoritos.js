@@ -7,7 +7,6 @@ import '../css/Favoritos.css'
 import SinFavoritos from '../components/SinFavoritos';
 import Modal from '../components/Modal';
 
-
 function Favoritos() {
 
     // Establezco un estado para pasarle al cartel Modal

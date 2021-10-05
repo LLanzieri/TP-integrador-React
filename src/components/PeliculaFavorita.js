@@ -39,9 +39,9 @@ function PeliculaFavorita(props) {
     useEffect(() => {
         buscarFavorito();
     }, [])
-    console.log(datosPelicula);
+    //console.log(datosPelicula);
     return (
-        
+
         <div className="pelicula">
             <div className="imagenPelicula">
                 <img src={prefijoImagen + datosPelicula.poster_path} alt="imagen de la película" />
@@ -51,9 +51,9 @@ function PeliculaFavorita(props) {
                 <p className="descripcion">{datosPelicula.overview}</p>
                 <p className="releaseDate">Fecha de lanzamiento: {datosPelicula.release_date}</p>
 
-                <button className="btnDetalle" onClick={() => {eliminarFavorito(datosPelicula.id);props.onShow()}}><a>Eliminar favorito <i class="fa fa-times-circle"></i></a></button>
-            <button className="btnDetalle"><Link to={'/detalle/' + id}>Más información <i class="fa fa-info-circle" aria-hidden="true"></i></Link></button>
-        </div>
+                <button className="btnDetalle" onClick={() => { eliminarFavorito(datosPelicula.id); props.onShow() }}><a>Eliminar favorito <i class="fa fa-times-circle"></i></a></button>
+                <button className="btnDetalle"><Link to={'/detalle/' + id}>Más información <i class="fa fa-info-circle" aria-hidden="true"></i></Link></button>
+            </div>
         </div >
     );
 }

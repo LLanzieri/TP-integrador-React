@@ -4,6 +4,7 @@
 }
 
 .animacionInferior {
-    border: 1px solid red;
+    /* border: 1px solid red; */
     width: 11%;
+    padding: 15px;
 }

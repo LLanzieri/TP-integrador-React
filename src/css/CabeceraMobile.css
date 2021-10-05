@@ -1,16 +1,16 @@
 .primerContainer {
     display: flex;
-    border: 1px solid yellow;
+    /* border: 1px solid yellow; */
     justify-content: space-between;
 }
 
 .animacion {
-    border: 1px solid purple;
+    /* border: 1px solid purple; */
     width: 15%;
 }
 
 .tituloPagina {
-    border: 1px solid pink;
+    /* border: 1px solid pink; */
     margin: 10px;
     padding-top: 10px;
     width: 20%;
@@ -21,7 +21,7 @@
 
 .btnHamburger {
     margin: auto 0px;
-    border: 1px solid green;
+    /* border: 1px solid green; */
 }
 
 .btnHamburger img {

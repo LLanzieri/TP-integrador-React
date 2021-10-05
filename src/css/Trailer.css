@@ -1,0 +1,24 @@
+.contenedor-trailer {
+    text-align: center;
+    margin: 5%;
+}
+
+.contenedor-trailer h1 {
+    margin: 15px;
+    font-style: italic;
+}
+
+.video-responsive {
+    overflow: hidden;
+    padding-bottom: 56.25%;
+    position: relative;
+    height: 0;
+}
+
+.video-responsive iframe {
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+}
