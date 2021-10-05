@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import Lottie from 'react-lottie';
 import animacion2 from '../animaciones/movie-theatre.json';
 import { Link } from "react-router-dom";
@@ -6,6 +6,8 @@ import '../css/CabeceraDesktop.css';
 import { useState } from "react/cjs/react.development";
 
 function CabeceraDesktop() {
+
+    const [valorInput, setValorInput] = useState("");
 
     const defaultOptions = {
         loop: true,
@@ -29,9 +31,9 @@ function CabeceraDesktop() {
                 </div>
             </div>
             <div className="containerDer">
-                <input type="text" name="inputBusqueda" className="inputBusquedaDesk" />
+                <input type="text" name="inputBusqueda" className="inputBusquedaDesk" onChange={(e) => setValorInput(e.target.value)} />
 
-                <button className="btnBusquedaDesk">BUSCAR</button>
+                <button className="btnBusquedaDesk" ><Link to={`/busqueda/${valorInput}`}>BUSCAR</Link></button>
             </div>
 
         </div>
@@ -39,3 +41,53 @@ function CabeceraDesktop() {
 }
 
 export default CabeceraDesktop;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

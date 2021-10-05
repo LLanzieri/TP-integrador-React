@@ -20,7 +20,7 @@ function App() {
 
           <Route path='/' exact component={Home} />
           <Route path='/detalle/:peliculaID' component={Detalle} />
-          <Route path='/busqueda' component={Busqueda} />
+          <Route path='/busqueda/:id' component={Busqueda} />
           <Route path='/favoritos' component={Favoritos} />
 
           {/* SI NO ENTRA A NINGUNA RUTA, MUESTRO EL ERROR */}
