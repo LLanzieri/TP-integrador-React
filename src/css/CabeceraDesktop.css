@@ -2,7 +2,7 @@
     display: flex;
     justify-content: space-between;
     width: 95%;
-   /*  border: 1px solid purple; */
+    /*  border: 1px solid purple; */
     margin: auto;
 }
 
@@ -20,7 +20,7 @@
 .tituloPaginaDesk {
     width: 30%;
     margin: auto;
-    padding-top:15px;
+    padding-top: 15px;
     text-align: center;
 }
 
@@ -67,18 +67,21 @@
     border-radius: 5px;
     background-color: transparent;
     border-color: #00ced1;
-    color: #00ced1;
     font-weight: 100;
     justify-content: center;
     font-size: 80%;
+    color: black;
 }
 
 .btnBusquedaDesk:hover {
-    background-color: #00ced1;
-    color: black;
     box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
     transition: all 0.3s ease 0s;
     cursor: pointer;
     outline: none;
     transform: translateY(-7px);
+}
+
+.btnBusquedaDesk a {
+    text-decoration: none;
+    color: #00ced1;
 }

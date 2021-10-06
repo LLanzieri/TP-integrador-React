@@ -1,0 +1,17 @@
+.containerContenido {
+    text-align: center;
+    margin: 10%;
+    font-style: italic;
+}
+
+.containerTituloResultados {
+    display: flex;
+    justify-content: space-around;
+}
+
+.containerContenido h1 {
+    font-size: 25px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    margin: 10px;
+}
+

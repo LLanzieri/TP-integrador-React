@@ -44,7 +44,9 @@ function PeliculaFavorita(props) {
 
         <div className="pelicula">
             <div className="imagenPelicula">
-                <img src={prefijoImagen + datosPelicula.poster_path} alt="imagen de la película" />
+                {
+                    datosPelicula.poster_path !== null ? <img src={prefijoImagen + datosPelicula.poster_path} alt="imagen de la película" /> : <img src='/imgs/ningunPoster.jpg' alt="Imágen del poster" />
+                }
             </div>
             <div className="containerReseña">
                 <p className="tituloPelicula">{datosPelicula.title}</p>

@@ -20,7 +20,9 @@ function Pelicula(props) {
         <>
             <div className="pelicula">
                 <div className="imagenPelicula">
-                    <img src={prefijo + props.mostrar.poster_path} alt="imagen de la película" />
+                    {
+                        props.mostrar.poster_path !== null ? <img src={prefijo + props.mostrar.poster_path} alt="imagen de la película" /> : <img src='/imgs/ningunPoster.jpg' alt="Imágen del poster" />
+                    }
                 </div>
                 <div className="containerReseña">
                     <p className="tituloPelicula">{props.mostrar.title}</p>
