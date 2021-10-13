@@ -3,7 +3,7 @@ import Lottie from 'react-lottie';
 import animacion2 from '../animaciones/movie-theatre.json';
 import { Link } from "react-router-dom";
 import '../css/CabeceraDesktop.css';
-import { useEffect, useState } from "react/cjs/react.development";
+import { useState } from "react/cjs/react.development";
 
 function CabeceraDesktop() {
 
@@ -17,6 +17,11 @@ function CabeceraDesktop() {
             preserveAspectRatio: "xMidYMid slice"
         }
     };
+
+    const refresh = () => {
+        // re-renders the component
+        window.location.reload(false);
+    }
 
     return (
         <div className="desktop">
@@ -32,7 +37,7 @@ function CabeceraDesktop() {
             </div>
             <div className="containerDer">
                 <input type="text" name="inputBusqueda" className="inputBusquedaDesk" onChange={(e) => setValorInput(e.target.value)} />
-                <button className="btnBusquedaDesk"><Link to={`/busqueda/${valorInput}`}>BUSCAR</Link></button>
+                <button className="btnBusquedaDesk" onClick={refresh}><Link to={`/busqueda/${valorInput}`}>BUSCAR</Link></button>
             </div>
 
         </div >

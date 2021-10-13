@@ -18,7 +18,6 @@ function Detalle(props) {
     const traerPeli = async () => {
         const data = await fetch(endPoint_detalle);
         const peli = await data.json();
-        console.log(peli);
         setPelicula(peli);
     }
 
@@ -43,7 +42,7 @@ function Detalle(props) {
                 <div className="container my-4">
                     < div className="row" id="peliDetalle">
                         <div className=" col-12 col-md-4">
-                            <img src={prefijo + Pelicula.poster_path} id="peliImg" className="rounded img-thumbnail" />
+                            <img src={prefijo + Pelicula.poster_path} id="peliImg" className="rounded img-thumbnail" alt="Imágen de la película" />
                         </div>
                         <div className="col-12 col-md-8" id="movieInfo">
                             {<h2> Título: {Pelicula.title} </h2>}
