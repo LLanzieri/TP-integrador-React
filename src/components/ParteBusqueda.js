@@ -21,7 +21,6 @@ function ParteBusqueda(props) {
                 <input type="text" name="inputBusqueda" className="inputBusqueda" onChange={(e) => setValorInput(e.target.value)} />
                 <button className="btnBusquedaDesk" onClick={refresh}><Link to={`/busqueda/${valorInput}`}>BUSCAR</Link></button>
             </div>
-
         </div>
     );
 }

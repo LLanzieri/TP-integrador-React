@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import Spinner from "../components/Spinner";
 import Trailer from "../components/Trailer";
 import '../css/Pelicula.css'
+import Fade from 'react-reveal/Fade';
 
 function Detalle(props) {
 
@@ -39,36 +40,38 @@ function Detalle(props) {
     return (
         <>
             {Pelicula === undefined ? <Spinner /> :
-                <div className="container my-4">
-                    < div className="row" id="peliDetalle">
-                        <div className=" col-12 col-md-4">
-                            <img src={prefijo + Pelicula.poster_path} id="peliImg" className="rounded img-thumbnail" alt="Imágen de la película" />
+                <Fade>
+                    <div className="container my-4">
+                        < div className="row" id="peliDetalle">
+                            <div className=" col-12 col-md-4">
+                                <img src={prefijo + Pelicula.poster_path} id="peliImg" className="rounded img-thumbnail" alt="Imágen de la película" />
+                            </div>
+                            <div className="col-12 col-md-8" id="movieInfo">
+                                {<h2> Título: {Pelicula.title} </h2>}
+                                <h5>Géneros: </h5>
+                                {Pelicula.genres.map(genre => {
+                                    let genero = genre.name;
+                                    return (
+                                        <ul key={genre.id} > <i class="fa fa-check-square"></i> {genero}</ul>
+                                    )
+                                })}
+
+                                <h5>Reseña: </h5>
+                                <p>{Pelicula.overview}</p>
+                                <h5 id="rating">Rating: {Pelicula.vote_average} </h5>
+                                <Link to='/' className="btn btnDetalle my-3">Volver al inicio</Link>
+                            </div>
                         </div>
-                        <div className="col-12 col-md-8" id="movieInfo">
-                            {<h2> Título: {Pelicula.title} </h2>}
-                            <h5>Géneros: </h5>
-                            {Pelicula.genres.map(genre => {
-                                let genero = genre.name;
+                        {
+                            trailers.length !== 0 && trailers.map(elemento => {
                                 return (
-                                    <ul key={genre.id} > <i class="fa fa-check-square"></i> {genero}</ul>
+                                    <Trailer key={elemento.id} idPelicula={elemento.key} titulo={elemento.name} />
                                 )
-                            })}
+                            })
+                        }
 
-                            <h5>Reseña: </h5>
-                            <p>{Pelicula.overview}</p>
-                            <h5 id="rating">Rating: {Pelicula.vote_average} </h5>
-                            <Link to='/' className="btn btnDetalle my-3">Volver al inicio</Link>
-                        </div>
                     </div>
-                    {
-                        trailers.length !== 0 && trailers.map(elemento => {
-                            return (
-                                <Trailer key={elemento.id} idPelicula={elemento.key} titulo={elemento.name} />
-                            )
-                        })
-                    }
-
-                </div>
+                </Fade>
             }
         </>
     )

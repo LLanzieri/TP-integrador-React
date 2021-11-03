@@ -4,6 +4,7 @@ import Hamburger from 'hamburger-react';
 import animacion2 from '../animaciones/movie-theatre.json';
 import Lottie from 'react-lottie';
 import '../css/CabeceraMobile.css';
+import Fade from 'react-reveal/Fade';
 
 function CabeceraMobile() {
 
@@ -36,7 +37,7 @@ function CabeceraMobile() {
 
             {/* SI visibilidad ES TRUE, MUESTRO <ParteBusqueda/> , SINO NO MUESTRO NADA */}
             {
-                visibilidad && <ParteBusqueda />
+                visibilidad && <Fade><ParteBusqueda /></Fade>
             }
         </>
     );

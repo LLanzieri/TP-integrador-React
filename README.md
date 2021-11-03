@@ -14,7 +14,9 @@ Nuestro proyecto se trata de la recreación de un sitio de información de pelí
 
 - Desarrollo basado en componentes funcionales de React.
 - Hooks.
-
+- React Responsive.
+- React Lottie.
+- React Reveal.
 
 **Para poder visualizar nuestro proyecto es necesario descargar las dependencias que se utilizan.**
 
@@ -23,4 +25,6 @@ Se debe abrir la carpeta del proyecto desde el mismo mediante ARCHIVO/ABRIR PROY
 
 2) Introduzca en una terminal (puede utilizar la terminal provista por el mismo Visual Studio Code) el siguiente comando: `$ npm install`
 
-2) Una vez instaladas las dependencias, inicie el proyecto: `$ npm start`
+3) Una vez instaladas las dependencias, inicie el proyecto: `$ npm start`
+
+4) El proyecto debería abrirse en su navegador automáticamente, en caso de que esto no suceda, puede acceder al mismo abriendo su navegador favorito y establecer en la barra de las URL la siguiente dirección: `https://localhost:3000`

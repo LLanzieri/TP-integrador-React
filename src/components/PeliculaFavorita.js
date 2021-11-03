@@ -2,6 +2,7 @@ import { React, useEffect } from "react";
 import { useState } from "react/cjs/react.development";
 import { Link } from 'react-router-dom'
 import '../css/Pelicula.css'
+import Slide from 'react-reveal/Slide';
 
 function PeliculaFavorita(props) {
 
@@ -41,22 +42,23 @@ function PeliculaFavorita(props) {
     }, [])
     //console.log(datosPelicula);
     return (
+        <Slide bottom>
+            <div className="pelicula">
+                <div className="imagenPelicula">
+                    {
+                        datosPelicula.poster_path !== null ? <img src={prefijoImagen + datosPelicula.poster_path} alt="imagen de la película" /> : <img src='/imgs/ningunPoster.jpg' alt="Imágen del poster" />
+                    }
+                </div>
+                <div className="containerReseña">
+                    <p className="tituloPelicula">{datosPelicula.title}</p>
+                    <p className="descripcion">{datosPelicula.overview}</p>
+                    <p className="releaseDate">Fecha de lanzamiento: {datosPelicula.release_date}</p>
 
-        <div className="pelicula">
-            <div className="imagenPelicula">
-                {
-                    datosPelicula.poster_path !== null ? <img src={prefijoImagen + datosPelicula.poster_path} alt="imagen de la película" /> : <img src='/imgs/ningunPoster.jpg' alt="Imágen del poster" />
-                }
-            </div>
-            <div className="containerReseña">
-                <p className="tituloPelicula">{datosPelicula.title}</p>
-                <p className="descripcion">{datosPelicula.overview}</p>
-                <p className="releaseDate">Fecha de lanzamiento: {datosPelicula.release_date}</p>
-
-                <button className="btnDetalle" onClick={() => { eliminarFavorito(datosPelicula.id); props.onShow() }}><a>Eliminar favorito <i class="fa fa-times-circle"></i></a></button>
-                <button className="btnDetalle"><Link to={'/detalle/' + id}>Más información <i class="fa fa-info-circle" aria-hidden="true"></i></Link></button>
-            </div>
-        </div >
+                    <button className="btnDetalle" onClick={() => { eliminarFavorito(datosPelicula.id); props.onShow() }}><a>Eliminar favorito <i class="fa fa-times-circle"></i></a></button>
+                    <button className="btnDetalle"><Link to={'/detalle/' + id}>Más información <i class="fa fa-info-circle" aria-hidden="true"></i></Link></button>
+                </div>
+            </div >
+        </Slide>
     );
 }
 

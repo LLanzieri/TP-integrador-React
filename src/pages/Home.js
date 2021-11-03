@@ -66,8 +66,10 @@ function Home() {
                     <div className="containerPeliculas">
                         {
                             peliculas.map(elemento => {
-                                return <Pelicula key={elemento.title} mostrar={elemento}
-                                    onShow={() => setVisibilidadModal(true)} />
+                                return (
+                                    <Pelicula key={elemento.title} mostrar={elemento}
+                                        onShow={() => setVisibilidadModal(true)} />
+                                )
                             })
                         }
                     </div>
